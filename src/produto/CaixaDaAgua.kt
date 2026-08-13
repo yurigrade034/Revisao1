@@ -17,14 +17,5 @@ class CaixaDaAgua {
     var cor : Cor = Cor.AZUL_FRACO
     var material : Material = Material.FIBRA_DE_VIDRO
     var formato : String = "tipo do formato"
-    var instalador : Instalador = Instalador(
-        nome = "",
-        cpf = "",
-        idade = 0,
-        salario = BigDecimal.ZERO,
-        turno = Turno.NOTURNO,
-        habilidade = Habilidade.INSTALACAO
-    )
-    var fornecedor : String = "nome do fornecedor"
     var preco : BigDecimal = BigDecimal.ZERO
 }

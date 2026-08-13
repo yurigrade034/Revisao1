@@ -1,8 +1,10 @@
 package sistema.caixadaagua
 import enumeradores.Cor
+import enumeradores.Material
+import produto.CaixaDaAgua
 
 
-fun cadastrarNovaCaixa(){
+fun cadastrarNovaCaixa(listaDeTeste : MutableList<CaixaDaAgua>){
 
     println("Digite a marca: ")
     val marca = readln()
@@ -37,4 +39,16 @@ fun cadastrarNovaCaixa(){
 
     println("Digite o preco: ")
     val preco = readln().toBigDecimal()
+
+    listaDeTeste.add(
+        CaixaDaAgua(
+            marca = marca,
+            modelo = modelo,
+            dimensao = dimensao,
+            cor = Cor,
+            material = Material,
+            formato = formato,
+            preco = preco
+        )
+        )
     }
