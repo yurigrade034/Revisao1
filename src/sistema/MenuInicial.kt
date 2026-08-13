@@ -1,11 +1,15 @@
 package sistema
 
 import produto.CaixaDaAgua
+import repositorio.JPA
 import sistema.caixadaagua.cadastrarNovaCaixa
 import sistema.caixadaagua.listarCaixa
 
 //deve rodar eternamente, caso raros de reinciar
 fun menuInicial(){
+    val jpa : JPA = JPA()
+    jpa.conectar()
+
     var listaDeTeste : MutableList<CaixaDaAgua> = mutableListOf()
     do{
         println("0 - Sair")
