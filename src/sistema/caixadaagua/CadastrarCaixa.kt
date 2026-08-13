@@ -19,7 +19,7 @@ fun cadastrarNovaCaixa(listaDeTeste : MutableList<CaixaDaAgua>){
     println("Digite a profundidade: ")
     val profundidade = readln().toDouble()
     //a dimensao é uma lista dos 3 valores acima
-    val dimensao = listOf<Double>(largura, altura, profundidade)
+    val dimensao = mutableListOf<Double>(largura, altura, profundidade)
 
     println("Escolha a cor: ")
     Cor.entries.forEach { cor ->
@@ -45,8 +45,8 @@ fun cadastrarNovaCaixa(listaDeTeste : MutableList<CaixaDaAgua>){
             marca = marca,
             modelo = modelo,
             dimensao = dimensao,
-            cor = Cor,
-            material = Material,
+            cor = Cor.entries[cor],
+            material = Material.entries[material],
             formato = formato,
             preco = preco
         )

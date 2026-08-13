@@ -7,15 +7,15 @@ import enumeradores.Turno
 import pessoas.Instalador
 import java.math.BigDecimal
 
-class CaixaDaAgua {
+class CaixaDaAgua (
     /**
      * Marca, Modelo, Dimensão(altura, largura, profundidade), enumeradores.Cor, enumeradores.Material, Formato, pessoas.Instalador, Preço, Fornecedor
      * */
-    var marca : String = "nome da marca"
-    var modelo : String = "nome da modelo"
-    var dimensao : MutableList<Double> = mutableListOf(0.0, 0.0, 0.0)
-    var cor : Cor = Cor.AZUL_FRACO
-    var material : Material = Material.FIBRA_DE_VIDRO
-    var formato : String = "tipo do formato"
-    var preco : BigDecimal = BigDecimal.ZERO
-}
+    val marca : String,
+    val modelo : String,
+    val dimensao : MutableList<Double>,
+    val cor : Cor,
+    val material : Material,
+    val formato : String,
+    val preco : BigDecimal,
+)
