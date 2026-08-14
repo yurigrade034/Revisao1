@@ -7,10 +7,7 @@ import sistema.caixadaagua.listarCaixa
 
 //deve rodar eternamente, caso raros de reinciar
 fun menuInicial(){
-    val jpa : JPA = JPA()
-    jpa.conectar()
 
-    var listaDeTeste : MutableList<CaixaDaAgua> = mutableListOf()
     do{
         println("0 - Sair")
         println("1 - Cadastrar Caixa De Água")
@@ -20,9 +17,9 @@ fun menuInicial(){
 
         val op = readln()
         when(op){
-            "1"-> cadastrarNovaCaixa(listaDeTeste)
+            "1"-> cadastrarNovaCaixa()
             "2"-> println()
-            "3"-> listarCaixa(listaDeTeste)
+            "3"-> listarCaixa()
             "4"-> println()
             "0"-> {
                 println("Tchau Paraguaio")

@@ -4,10 +4,10 @@ import produto.CaixaDaAgua
 import java.text.NumberFormat
 import java.util.Locale
 
-fun listarCaixa(listaDeTeste : MutableList<CaixaDaAgua>){
+fun listarCaixa(){
     val formatador = NumberFormat.getCurrencyInstance(Locale("pt", "BR"))
     //var caixaDaAgua : List<CaixaDaAgua> = listOf()
-        listaDeTeste.forEach{ c->
+/*        listaDeTeste.forEach{ c->
         println("--------")
         println("Modelo: ${c.modelo}")
         println("Marca: ${c.marca}")
@@ -17,4 +17,5 @@ fun listarCaixa(listaDeTeste : MutableList<CaixaDaAgua>){
         println("Material: ${c.material}")
         println("Preço: ${formatador.format(c.preco)}")
     }
+ */
 }

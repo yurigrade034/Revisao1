@@ -2,9 +2,10 @@ package sistema.caixadaagua
 import enumeradores.Cor
 import enumeradores.Material
 import produto.CaixaDaAgua
+import repositorio.JPA
 
 
-fun cadastrarNovaCaixa(listaDeTeste : MutableList<CaixaDaAgua>){
+fun cadastrarNovaCaixa(){
 
     println("Digite a marca: ")
     val marca = readln()
@@ -40,7 +41,8 @@ fun cadastrarNovaCaixa(listaDeTeste : MutableList<CaixaDaAgua>){
     println("Digite o preco: ")
     val preco = readln().toBigDecimal()
 
-    listaDeTeste.add(
+    val conexao = JPA()
+    conexao.salvar(
         CaixaDaAgua(
             marca = marca,
             modelo = modelo,
