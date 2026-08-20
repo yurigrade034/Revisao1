@@ -61,6 +61,35 @@ class JPA(
         } catch (e: SQLException) {
             println("F total parceiro: ${e.printStackTrace()}")
         }
-    }
+    } //fim do metodo salvar
+
+    fun listar (){
+        try{
+            conectar()
+            val stmt = conexao!!.createStatement()
+            val sql = "SELECT * FROM caixa_da_agua"
+            //Esses metadados vem em forma de Lista, ResultSet
+            val metadados = stmt.executeQuery(sql)
+            val resultado = metadados.metaData //Metadados do banco
+            val tamanhoTabela = resultado.columnCount //Tamanho da tabela em colunas
+
+            while(metadados.next()){
+                for(i in 1..tamanhoTabela){
+                    //nome da coluna
+                    val nomeColuna = resultado.getColumnName(i)
+                    //dado que esta nessa coluna
+                    val valorColuna = metadados.getString(i)
+                    println("$nomeColuna -> $valorColuna")
+                }//fim for
+                println("---------------------------------------------------------------")
+
+            }//fim while
+
+            stmt.close()
+            conexao!!.close()
+        }catch (e: SQLException){
+            println("F total parceiro: ${e.printStackTrace()}")
+        }
+    } //fim do metodo listar
 
 }

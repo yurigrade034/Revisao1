@@ -1,21 +1,9 @@
 package sistema.caixadaagua
 
-import produto.CaixaDaAgua
-import java.text.NumberFormat
-import java.util.Locale
+import repositorio.JPA
+
 
 fun listarCaixa(){
-    val formatador = NumberFormat.getCurrencyInstance(Locale("pt", "BR"))
-    //var caixaDaAgua : List<CaixaDaAgua> = listOf()
-/*        listaDeTeste.forEach{ c->
-        println("--------")
-        println("Modelo: ${c.modelo}")
-        println("Marca: ${c.marca}")
-        println("Dimensao: ${c.dimensao}")
-        println("Cor: ${c.cor}")
-        println("Formato: ${c.formato}")
-        println("Material: ${c.material}")
-        println("Preço: ${formatador.format(c.preco)}")
-    }
- */
+    val jpa = JPA()
+    jpa.listar()
 }
