@@ -29,6 +29,7 @@ fun cadastrarNovaCaixa(){
     println("numero da cor: ")
     val cor = readln().toInt()
 
+    println("Escolha o material: ")
     Cor.entries.forEach { material ->
         println("${material.ordinal} - ${material.name}")
     }
