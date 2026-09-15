@@ -218,7 +218,3 @@ INSERT INTO caixa (dinheiro) VALUES (1000.00);
 - Sem validação de valores negativos em salário (só o estoque e o saldo do caixa têm trava).
 
 ---
-
-## 💬 Quer adicionar algo?
-
-Esse README cobre o que já está implementado. Se quiser evoluir o projeto (ex: transação SQL real, um papel de "Vendedor" dedicado, módulo de manutenção, autenticação de usuário, etc.), é só puxar assunto — dá pra planejar o que faz sentido entrar antes de mexer no código.
