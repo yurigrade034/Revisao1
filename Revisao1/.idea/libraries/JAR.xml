@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="JAR">
+    <CLASSES>
+      <root url="file://$USER_HOME$/Program Files/JAR" />
+      <root url="jar://$PROJECT_DIR$/../../../../../../../JPA/postgresql-42.7.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../../JPA/postgresql-42.7.13.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$USER_HOME$/Program Files/JAR" recursive="false" />
+  </library>
+</component>
